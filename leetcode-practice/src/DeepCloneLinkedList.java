@@ -1,6 +1,6 @@
 // Definition for a Node.
-package main.java.com.leetcode;
 
+import java.util.HashMap;
 import java.util.Map;
 
 class Node {
@@ -41,7 +41,7 @@ class DeepCloneLinkedList {
             node = node.next;
         }
 
-        node = newHead;`
+        node = newHead;
         while(oldHead !=null){
             node.random = nodeToNode.get(oldHead.random);
             oldHead = oldHead.next;

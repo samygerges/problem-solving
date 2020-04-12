@@ -1,4 +1,3 @@
-package com.samy.demo;
 
 import java.util.PriorityQueue;
 
