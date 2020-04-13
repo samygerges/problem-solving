@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Queue;
 
 public class MinCost {
 
@@ -40,9 +39,7 @@ public class MinCost {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(mincostTickets(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31 }, new int[] { 2, 7, 15 }));
-		Queue<Boolean> queue;
-		
+		System.out.println(mincostTickets(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31 }, new int[] { 2, 7, 15 }));	
 	}
 
 }
