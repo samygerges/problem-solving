@@ -1,7 +1,7 @@
 package others;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class ArrayPremutation {
 
@@ -26,12 +26,7 @@ public class ArrayPremutation {
 	}
 
 	public static void main(String[] args) {
-		// System.out.println(subsets(new int[] { 1, 2, 3 }));
-		Random r = new Random();
-		System.out.println(r.nextInt(1));
-		
-		System.out.println(r.nextInt(2));
-		
-//		System.out.println(r.nextInt(3));
+		ArrayPremutation a = new ArrayPremutation();
+		System.out.println(a.permute(new int[] { 1, 2, 3 }));
 	}
 }
