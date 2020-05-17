@@ -16,13 +16,14 @@ public class FindAnagrams {
 			arr[c - 'a']++;
 		}
 
-		for (int i = 0; i < s.length() - p.length() + 1; i++) {
-			int[] anagram = new int[26];
-			for (int j = i; j < i + p.length(); j++) {
-				anagram[s.charAt(j) - 'a']++;
+		int[] anagram = new int[26];
+		for (int i = 0; i < s.length(); i++) {
+			anagram[s.charAt(i) - 'a']++;
+			if (i >= p.length()) {
+				anagram[s.charAt(i - p.length()) - 'a']--;
 			}
 			if (anagram(arr, anagram)) {
-				ans.add(i);
+				ans.add(i - p.length() + 1);
 			}
 		}
 
