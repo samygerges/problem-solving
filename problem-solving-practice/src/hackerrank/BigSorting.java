@@ -9,10 +9,7 @@ public class BigSorting {
 			if (a.length() == b.length()) {
 				return a.compareTo(b);
 			}
-			if (a.length() < b.length()) {
-				return -1;
-			}
-			return 1;
+			return a.length() - b.length();
 		});
 		
 		return unsorted;
