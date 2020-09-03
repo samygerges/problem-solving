@@ -3,26 +3,18 @@ package leetcode;
 public class RepeatedSubstringPattern {
 
 	public boolean repeatedSubstringPattern(String s) {
-		if (s == null)
-			return false;
-		if (s.length() == 1)
-			return false;
-		int left = 0;
-		int right = 1;
-		char[] arr = s.toCharArray();
-		while (left < right && left < s.length()) {
-			while (right < s.length() && arr[right] != arr[left])
-				right++;
-			if (right + right - left <= s.length()
-					&& !s.substring(left, right).equals(s.substring(right, right + right - left)))
-				return false;
-			else if (right + right - left > s.length())
-				return false;
-
-			left = right;
-			right++;
+		for (int i = s.length() / 2; i > 0; i--) {
+			if (s.length() % i == 0) {
+				int inc = 0;
+				while (i + inc < s.length() && s.charAt(inc) == s.charAt(i + inc)) {
+					inc++;
+				}
+				if (i + inc == s.length()) {
+					return true;
+				}
+			}
 		}
-		return true;
+		return false;
 	}
 
 	public static void main(String[] args) {
