@@ -6,19 +6,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
+import javafx.util.Pair;
+
 public class EvaluateDivision {
-
-	class Node {
-		String from;
-		String to;
-		double value;
-
-		public Node(String from, String to, double value) {
-			this.from = from;
-			this.to = to;
-			this.value = value;
-		}
-	}
 
 	public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
 		if (equations == null || equations.isEmpty() || queries == null || queries.isEmpty()) {
@@ -26,13 +16,14 @@ public class EvaluateDivision {
 		}
 
 		double[] res = new double[queries.size()];
-		Map<String, List<Node>> map = new HashMap<>();
+		Map<String, List<Pair<Pair<String, String>, Double>>> map = new HashMap<>();
 		for (int i = 0; i < equations.size(); i++) {
 			map.putIfAbsent(equations.get(i).get(0), new ArrayList<>());
 			map.putIfAbsent(equations.get(i).get(1), new ArrayList<>());
-			map.get(equations.get(i).get(0)).add(new Node(equations.get(i).get(0), equations.get(i).get(1), values[i]));
+			map.get(equations.get(i).get(0))
+					.add(new Pair<>(new Pair<>(equations.get(i).get(0), equations.get(i).get(1)), values[i]));
 			map.get(equations.get(i).get(1))
-					.add(new Node(equations.get(i).get(1), equations.get(i).get(0), 1 / values[i]));
+					.add(new Pair<>(new Pair<>(equations.get(i).get(1), equations.get(i).get(0)), 1 / values[i]));
 		}
 
 		for (int i = 0; i < queries.size(); i++) {
@@ -45,17 +36,18 @@ public class EvaluateDivision {
 		return res;
 	}
 
-	private double dfs(Map<String, List<Node>> map, String from, String to, HashSet<String> visited, double value) {
+	private double dfs(Map<String, List<Pair<Pair<String, String>, Double>>> map, String from, String to,
+			HashSet<String> visited, double value) {
 		if (from.equals(to)) {
 			return value;
 		}
 		visited.add(from);
-		for (Node node : map.get(from)) {
-			if (visited.contains(node.to)) {
+		for (Pair<Pair<String, String>, Double> node : map.get(from)) {
+			if (visited.contains(node.getKey().getValue())) {
 				continue;
 			}
-			double res = dfs(map, node.to, to, visited, value * node.value);
-			if(res != -1) {
+			double res = dfs(map, node.getKey().getValue(), to, visited, value * node.getValue());
+			if (res != -1) {
 				return res;
 			}
 		}
