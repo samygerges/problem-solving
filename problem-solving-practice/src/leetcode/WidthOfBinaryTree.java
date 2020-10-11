@@ -3,9 +3,10 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WidthOfBinaryTree {
+public class WidthOfBinaryTree
+{
 	public int widthOfBinaryTree(TreeNode root) {
-		if (root == null) {
+        if (root == null) {
 			return 0;
 		}
 		List<Integer> tree = new ArrayList<>();
