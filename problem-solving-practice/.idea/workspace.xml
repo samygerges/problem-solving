@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="91c76750-9735-40a1-8393-6f8409916980" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SRM 232 DIV 2/SRM 232 DIV 2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SRM 232 DIV 2/SRM 232 DIV 2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problem-solving-practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/problem-solving-practice.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ilncBfsrVBSs9rHY7e6slaVYle" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
   <component name="RunManager">
+    <configuration name="ContainerWithMostWater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="leetcode.ContainerWithMostWater" />
+      <module name="problem-solving-practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -12,5 +64,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ContainerWithMostWater" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91c76750-9735-40a1-8393-6f8409916980" name="Default Changelist" comment="" />
+      <created>1602491122421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602491122421</updated>
+      <workItem from="1602491123476" duration="256000" />
+      <workItem from="1602492181314" duration="39000" />
+      <workItem from="1602602401332" duration="1505000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="4280" y="77" key="#Project_Structure" timestamp="1602603260020">
+      <screen x="3840" y="-17" width="1920" height="1040" />
+    </state>
+    <state x="4280" y="77" key="#Project_Structure/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602603260020" />
+    <state x="4254" y="157" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602603273351">
+      <screen x="3840" y="-17" width="1920" height="1040" />
+    </state>
+    <state x="4254" y="157" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602603273351" />
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1602603903675">
+      <screen x="3840" y="-17" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602603903675" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1602603903675">
+      <screen x="3840" y="-17" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602603903675" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1602603903675">
+      <screen x="3840" y="-17" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602603903675" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1602603903675">
+      <screen x="3840" y="-17" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602603903675" />
+    <state x="4280" y="77" key="SettingsEditor" timestamp="1602603352509">
+      <screen x="3840" y="-17" width="1920" height="1040" />
+    </state>
+    <state x="4280" y="77" key="SettingsEditor/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602603352509" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leetcode/ContainerWithMostWater.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
