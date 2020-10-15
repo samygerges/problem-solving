@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91c76750-9735-40a1-8393-6f8409916980" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +35,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.HouseRobber2">
+  <component name="RunManager" selected="Application.SpiralMatrix">
     <configuration name="ContainerWithMostWater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -63,6 +64,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpiralMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leetcode.SpiralMatrix" />
+      <module name="problem-solving-practice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -78,6 +92,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SpiralMatrix" />
         <item itemvalue="Application.HouseRobber2" />
         <item itemvalue="Application.ContainerWithMostWater" />
       </list>
@@ -94,7 +109,9 @@
       <workItem from="1602491123476" duration="256000" />
       <workItem from="1602492181314" duration="39000" />
       <workItem from="1602602401332" duration="1768000" />
-      <workItem from="1602659977943" duration="6901000" />
+      <workItem from="1602659977943" duration="7552000" />
+      <workItem from="1602691110107" duration="519000" />
+      <workItem from="1602771712234" duration="118000" />
     </task>
     <servers />
   </component>
@@ -114,22 +131,22 @@
       <screen x="3840" y="-17" width="1920" height="1040" />
     </state>
     <state width="407" height="466" key="DebuggerActiveHint/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602665117041" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602669452613">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602691628595">
       <screen x="3840" y="-17" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602669452613" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602669452613">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602691628595" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602691628594">
       <screen x="3840" y="-17" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602669452613" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602669452613">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602691628594" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602691628594">
       <screen x="3840" y="-17" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602669452613" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602669452613">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602691628594" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602691628594">
       <screen x="3840" y="-17" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602669452613" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/3840.-17.1920.1040/1920.-11.1920.1040@3840.-17.1920.1040" timestamp="1602691628594" />
     <state x="4280" y="77" key="SettingsEditor" timestamp="1602603352509">
       <screen x="3840" y="-17" width="1920" height="1040" />
     </state>
@@ -143,11 +160,19 @@
           <line>11</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/leetcode/SpiralMatrix.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="dp" language="JAVA" />
+        <watch expression="count" language="JAVA" />
+        <watch expression="answer" language="JAVA" />
+        <watch expression="currentDir" language="JAVA" />
+        <watch expression="i + dir[currentDir][0]" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
