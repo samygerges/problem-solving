@@ -39,4 +39,22 @@ public class NumberComplement
 		}
 		return res;
 	}
+
+	public int findComplementOptimized(int n) {
+		if(n == 0) {
+			return 1;
+		}
+
+		int answer = 0;
+		int multiplier = 1;
+
+		while(n > 0) {
+			int bit = n & 1;
+			answer += multiplier * (1 - bit);
+			n >>= 1;
+			multiplier <<= 1;
+		}
+
+		return answer;
+	}
 }
