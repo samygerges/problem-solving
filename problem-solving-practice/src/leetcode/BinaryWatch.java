@@ -9,7 +9,7 @@ public class BinaryWatch
 	{
 		System.out.println(new BinaryWatch().readBinaryWatch(2));
 	}
-	
+
 	public List<String> readBinaryWatch(int num) {
 		Set<String> answer = new HashSet<>();
 		int[] arr = new int[10];
