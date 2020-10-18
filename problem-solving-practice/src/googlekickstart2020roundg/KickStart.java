@@ -1,4 +1,4 @@
-package src.googlekickstart2020roundg;
+package googlekickstart2020roundg;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
