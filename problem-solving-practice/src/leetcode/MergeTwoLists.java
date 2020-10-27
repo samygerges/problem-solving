@@ -2,6 +2,18 @@ package leetcode;
 
 public class MergeTwoLists
 {
+	class ListNode
+	{
+		int val;
+		ListNode next;
+
+		ListNode(int x)
+		{
+			val = x;
+			next = null;
+		}
+	}
+
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		ListNode head = null;
 		ListNode current = null;
