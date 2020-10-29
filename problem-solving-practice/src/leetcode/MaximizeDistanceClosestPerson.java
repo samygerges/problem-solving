@@ -10,7 +10,6 @@ public class MaximizeDistanceClosestPerson
 	public int maxDistToClosest(int[] seats)
 	{
 		int max = 0;
-		int st = -1;
 		int count = 0;
 		for (int i = 0; i < seats.length; i++)
 		{
