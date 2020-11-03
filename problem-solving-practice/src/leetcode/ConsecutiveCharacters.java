@@ -30,4 +30,19 @@ public class ConsecutiveCharacters
 		}
 		return Math.max(max, cnt);
 	}
+
+	public int maxPowerOptimized(String s) {
+		if(s == null || s.length() == 0) {
+			return 0;
+		}
+
+		int max = 1;
+		int cnt = 1;
+		for (int i = 1; i < s.length(); i++)
+		{
+			cnt = s.charAt(i - 1) == s.charAt(i) ? cnt + 1 : 1;
+			max = Math.max(cnt, max);
+		}
+		return max;
+	}
 }
