@@ -16,8 +16,6 @@ public class MinimumLengthEncoding
 	class TrieNode
 	{
 		Map<Character, TrieNode> children;
-		boolean isWord;
-		String content;
 
 		TrieNode()
 		{
@@ -33,8 +31,6 @@ public class MinimumLengthEncoding
 		{
 			current = current.children.computeIfAbsent(arr[i], node -> new TrieNode());
 		}
-		current.isWord = true;
-		current.content = word;
 	}
 
 	public boolean search(String word)
