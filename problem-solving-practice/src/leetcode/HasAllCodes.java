@@ -17,7 +17,7 @@ public class HasAllCodes
 		{
 			all.add(s.substring(i, i + k));
 		}
-
+		//return all.size() == Math.pow(2, k);
 		return all.size() == 1 << k;
 	}
 
