@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.StringJoiner;
 
-public class Solution
+public class ReversortEngineering
 {
 	public static void main(String[] args)
 	{
