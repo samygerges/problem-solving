@@ -6,7 +6,7 @@ public class RussianDollEnvelopes
 {
 	public static void main(String[] args)
 	{
-		System.out.println(new RussianDollEnvelopes().maxEnvelopes(new int[][] { { 4, 5 }, { 4, 6 }, { 6, 7 }, { 2, 3 }, { 1, 1 } }));
+		System.out.println(new RussianDollEnvelopes().maxEnvelopes(new int[][] { { 46, 89 }, { 50, 53 }, { 52, 68 }, { 72, 45 }, { 77, 81 } }));
 	}
 
 	public int maxEnvelopes(int[][] envelopes)
@@ -27,7 +27,22 @@ public class RussianDollEnvelopes
 		int max = 1;
 		for (int i = 0; i < envelopes.length; i++)
 		{
-			for (int j = i + 1; j < envelopes.length; j++)
+			int low = i + 1;
+			int high = envelopes.length - 1;
+			int mid = low;
+			while (low <= high)
+			{
+				mid = low + (high - low) / 2;
+				if (envelopes[mid][0] > envelopes[i][0])
+				{
+					high = mid - 1;
+				}
+				else
+				{
+					low = mid + 1;
+				}
+			}
+			for (int j = low; j < envelopes.length; j++)
 			{
 				if (envelopes[j][0] > envelopes[i][0] && envelopes[j][1] > envelopes[i][1])
 				{
