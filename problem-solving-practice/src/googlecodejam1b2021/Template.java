@@ -22,5 +22,25 @@ public class Template
 	{
 		return 0;
 	}
+
+	private double calcHour(long num)
+	{
+		double res = (num * 1.0) / Math.pow(10, 9);
+		return res / (60.0 * 60.0);
+	}
+
+	private double calcMin(long num)
+	{
+		double res = (num * 1.0) / Math.pow(10, 9);
+		res /= 12.0;
+		return res / 60.0;
+	}
+
+	private double calcSec(long num)
+	{
+		double res = (num * 1.0) / Math.pow(10, 9);
+		res /= 720.0;
+		return res / 60.0;
+	}
 }
 
