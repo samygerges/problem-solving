@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.TreeSet;
 
 public class ClosestPick
 {
@@ -24,7 +23,7 @@ public class ClosestPick
 			{
 				p[j] = in.nextInt();
 			}
-			double res = calculate2(range, p);
+			double res = calculate(range, p);
 			System.out.println("Case #" + i + ": " + res);
 		}
 		in.close();
