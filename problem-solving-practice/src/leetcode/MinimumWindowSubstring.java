@@ -5,56 +5,53 @@ import java.util.Map;
 
 public class MinimumWindowSubstring {
     public String minWindow(String s, String t) {
-        Map<Character, Integer> counts = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<>();
         for (char c : t.toCharArray()) {
-            counts.put(c, counts.getOrDefault(c, 0) + 1);
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
 
-        String ans = "";
-        int minLength = Integer.MAX_VALUE;
-        int l = 0;
-        int r = 0;
-        while (l < s.length()) {
-            Map<Character, Integer> current = new HashMap<>(counts);
-            Map<Character, Integer> currentCount = new HashMap<>();
-            while (r < s.length()) {
-                if (counts.containsKey(s.charAt(r))) {
-                    currentCount.put(s.charAt(r), currentCount.getOrDefault(s.charAt(r), 0) + 1);
-                    if (current.containsKey(s.charAt(r))) {
-                        current.put(s.charAt(r), current.get(s.charAt(r)) - 1);
-                        if (current.get(s.charAt(r)) == 0) {
-                            current.remove(s.charAt(r));
-                        }
-                    }
-                }
-                if (current.size() == 0) break;
-                r++;
-            }
-            if (current.size() == 0) {
-                while (l <= r) {
-                    if (counts.containsKey(s.charAt(l))) {
-                        if (currentCount.get(s.charAt(l)) > counts.get(s.charAt(l))) {
-                            currentCount.put(s.charAt(l), currentCount.get(s.charAt(l)) - 1);
-                        } else {
-                            if (minLength > r - l + 1) {
-                                minLength = r - l + 1;
-                                ans = s.substring(l, r + 1);
-                            }
-                            break;
-                        }
-                    }
-                    l++;
+        int left = 0;
+        int right = 0;
+        int minimum = Integer.MAX_VALUE;
+        String res = "";
+        Map<Character, Integer> currentMap = new HashMap<>();
+        while (left < s.length()) {
+            while (right < s.length()) {
+                currentMap.put(s.charAt(right), currentMap.getOrDefault(s.charAt(right), 0) + 1);
+                right++;
+                if (match(currentMap, map)) {
+                    break;
                 }
             }
-            l++;
-            r = l;
+            while (left < right - 1 && (!map.containsKey(s.charAt(left)) || currentMap.get(s.charAt(left)) > map.getOrDefault(s.charAt(left), 0))) {
+                currentMap.put(s.charAt(left), currentMap.get(s.charAt(left)) - 1);
+                left++;
+            }
+            if (match(currentMap, map)) {
+                if (minimum > right - left) {
+                    minimum = right - left;
+                    res = s.substring(left, right);
+                }
+            }
+            currentMap.put(s.charAt(left), currentMap.get(s.charAt(left)) - 1);
+            left++;
         }
 
-        return ans;
+        return res;
+    }
+
+    private boolean match(Map<Character, Integer> substring, Map<Character, Integer> t) {
+        for (char c : t.keySet()) {
+            if (!substring.containsKey(c) || substring.get(c) < t.get(c)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
-        System.out.println(new MinimumWindowSubstring().minWindow("bdab", "ab"));
+        System.out.println(new MinimumWindowSubstring().minWindow("abc", "b"));
+        System.out.println(new MinimumWindowSubstring().minWindow("a", "a"));
         System.out.println(new MinimumWindowSubstring().minWindow("ADOBECODEBANC", "ABC"));
     }
 }
