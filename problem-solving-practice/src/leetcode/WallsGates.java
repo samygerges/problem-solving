@@ -1,6 +1,8 @@
 package leetcode;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WallsGates {
     private static final int INF = 2147483647;
@@ -9,42 +11,38 @@ public class WallsGates {
     public void wallsAndGates(int[][] rooms) {
         int n = rooms.length;
         int m = rooms[0].length;
-
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                if (rooms[i][j] == INF) {
-                    List<int[]> nextRound = new ArrayList<>(neighbors(n, m, rooms, i, j));
-                    ArrayDeque<int[]> queue = new ArrayDeque<>(nextRound);
+                if (rooms[i][j] == 0) {
+                    boolean[][] visited = new boolean[n][m];
+                    visited[i][j] = true;
+                    ArrayDeque<int[]> queue = new ArrayDeque<>(neighbors(n, m, rooms, i, j, visited));
                     int rounds = 1;
                     while (!queue.isEmpty()) {
-                        boolean found = false;
-                        nextRound = new ArrayList<>();
-                        while (!queue.isEmpty()) {
+                        int size = queue.size();
+                        while (size > 0) {
                             int[] pos = queue.poll();
-                            if (rooms[pos[0]][pos[1]] == 0) {
-                                rooms[i][j] = rounds;
-                                found = true;
-                                break;
+                            visited[pos[0]][pos[1]] = true;
+                            if (rooms[pos[0]][pos[1]] != 0) {
+                                rooms[pos[0]][pos[1]] = Math.min(rooms[pos[0]][pos[1]], rounds);
                             }
-                            nextRound.addAll(neighbors(n, m, rooms, pos[0], pos[1]));
-                        }
-                        if (found) {
-                            break;
+                            queue.addAll(neighbors(n, m, rooms, pos[0], pos[1], visited));
+                            size--;
                         }
                         rounds++;
-                        queue.addAll(nextRound);
                     }
                 }
             }
         }
     }
 
-    private List<int[]> neighbors(int n, int m, int[][] rooms, int i, int j) {
+    private List<int[]> neighbors(int n, int m, int[][] rooms, int i, int j, boolean[][] visited) {
         List<int[]> neighbors = new ArrayList<>();
         for (int[] direction : dir) {
             if (i + direction[0] < n && i + direction[0] > -1
                     && j + direction[1] < m && j + direction[1] > -1
-                    && rooms[i + direction[0]][j + direction[1]] != -1) {
+                    && rooms[i + direction[0]][j + direction[1]] != -1
+                    && !visited[i + direction[0]][j + direction[1]]) {
                 neighbors.add(new int[]{i + direction[0], j + direction[1]});
             }
         }
