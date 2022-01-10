@@ -18,7 +18,7 @@ public class PrintDiagonals {
         queue.add(new int[]{0, 0});
         while (!queue.isEmpty()) {
             int size = queue.size();
-            while (size > 0) {
+            for (int j = 0; j < size; j++) {
                 int[] e = queue.poll();
                 if (!visited[e[0]][e[1]]) {
                     visited[e[0]][e[1]] = true;
@@ -28,13 +28,12 @@ public class PrintDiagonals {
                     int r = e[0];
                     int c = e[1] + 1;
                     for (int i = c; i >= 0; i--) {
-                        if (r < n) {
+                        if (r < n && !visited[r][i]) {
                             queue.add(new int[]{r, i});
                             r++;
                         }
                     }
                 }
-                size--;
             }
             System.out.println();
         }
